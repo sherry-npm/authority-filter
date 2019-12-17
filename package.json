@@ -1,0 +1,49 @@
+{
+  "name": "authority-filter",
+  "version": "0.0.1",
+  "description": "管理端用户前端权限过滤工具",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "src/*.js",
+    "dist/*.js"
+  ],
+  "author": "Sherry",
+  "license": "MIT",
+  "repository": "https://git.code.tencent.com/sherry_npm/authority-filter.git",
+  "keywords": ["authority"],
+  "scripts": {
+    "release_major": "npm version major",
+    "release_minor": "npm version minor",
+    "release_patch": "npm version patch",
+    "postversion": "npm publish",
+    "prepublishOnly": "npm run build",
+    "build": "webpack"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "eslint": "^5.16.0",
+    "webpack": "^4.34.0",
+    "webpack-cli": "^3.3.4"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint src/*",
+      "git add"
+    ],
+    "*.vue": [
+      "eslint src/*",
+      "git add"
+    ]
+  }
+}
