@@ -1,6 +1,6 @@
 {
   "name": "authority-filter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "管理端用户前端权限过滤工具",
   "main": "dist/index.js",
   "module": "dist/index.js",
